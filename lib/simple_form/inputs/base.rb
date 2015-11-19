@@ -26,6 +26,9 @@ module SimpleForm
       include SimpleForm::Components::Placeholders
       include SimpleForm::Components::Readonly
 
+
+      include SimpleForm::Components::Icons
+
       attr_reader :attribute_name, :column, :input_type, :reflection,
                   :options, :input_html_options, :input_html_classes, :html_classes
 

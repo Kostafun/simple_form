@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.summary     = "Forms made easy!"
   s.email       = "opensource@plataformatec.com.br"
-  s.homepage    = "https://github.com/kostafun/simple_form"
+  s.homepage    = "https://github.com/Kostafun/simple_form"
   s.description = "Forms made easy!"
   s.authors     = ['José Valim', 'Carlos Antônio', 'Rafael França']
   s.license     = "MIT"
