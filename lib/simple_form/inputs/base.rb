@@ -28,6 +28,7 @@ module SimpleForm
 
 
       include SimpleForm::Components::Icons
+      include SimpleForm::Components::Tooltips
 
       attr_reader :attribute_name, :column, :input_type, :reflection,
                   :options, :input_html_options, :input_html_classes, :html_classes

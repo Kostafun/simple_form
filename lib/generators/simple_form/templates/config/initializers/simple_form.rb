@@ -8,6 +8,7 @@ SimpleForm.setup do |config|
   config.wrappers :material_form, tag: 'div', class: 'row', error_class: 'has-error' do |b|
     b.use :html5
     b.use :placeholder
+    b.use :tooltip
 
     b.wrapper tag: 'div', class: 'input-field col s12' do |append|
       append.use :icon, wrap_with: { tag: 'i', class: 'material-icons prefix' }
@@ -19,6 +20,20 @@ SimpleForm.setup do |config|
 
   end
 
+  config.wrappers :short_form, tag: 'div', error_class: 'has-error' do |b|
+    b.use :html5
+    b.use :placeholder
+    b.use :tooltip
+
+    b.wrapper tag: 'div', class: 'short input-field' do |append|
+      append.use :icon, wrap_with: { tag: 'i', class: 'material-icons prefix' }
+      append.use :input, class: 'form-control validate'
+      append.use :label
+    end
+    b.use :error, wrap_with: { tag: 'span', class: 'help-block' }
+
+
+  end
 
   # The default wrapper to be used by the FormBuilder.
   config.default_wrapper = :material_form

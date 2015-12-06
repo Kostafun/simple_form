@@ -18,5 +18,9 @@ module SimpleForm
     autoload :Pattern
     autoload :Placeholders
     autoload :Readonly
+
+    autoload :Icons
+    autoload :Tooltips
+
   end
 end

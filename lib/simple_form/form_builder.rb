@@ -214,6 +214,18 @@ module SimpleForm
       end
     end
 
+    def material_button(*args, &block)
+      template.content_tag :div, :class => "row" do
+        template.content_tag :div, :class => "form-actions col s12" do
+          options = args.extract_options!.dup
+          options[:class] = ['btn waves-effect waves-light right', options[:class]].compact
+          args << options
+
+            submit(*args, &block)
+
+        end
+      end
+    end
     # Creates an error tag based on the given attribute, only when the attribute
     # contains errors. All the given options are sent as :error_html.
     #
