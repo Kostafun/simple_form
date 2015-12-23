@@ -1,6 +1,11 @@
 module SimpleForm
   module Inputs
     class BooleanInput < Base
+
+      def initialize(builder, attribute_name, column, input_type, options = {})
+        super(builder, attribute_name, column, input_type, {:label => false, :inline_label => true}.merge(options))
+      end
+
       def input(wrapper_options = nil)
         merged_input_options = merge_wrapper_options(input_html_options, wrapper_options)
 
@@ -14,6 +19,8 @@ module SimpleForm
           build_check_box(unchecked_value, merged_input_options)
         end
       end
+
+
 
       def label_input(wrapper_options = nil)
         if options[:label] == false || inline_label?
