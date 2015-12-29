@@ -4,9 +4,9 @@ module SimpleForm
       enable :placeholder, :maxlength, :pattern
 
       def input(wrapper_options = nil)
-        if input_html_options[:value] == nil &&  Rails.env.development?
-          input_html_options[:value] = 'test@test.test'
-        end
+       # if input_html_options[:value] == nil &&  Rails.env.development?
+       #   input_html_options[:value] = 'test@test.test'
+       # end
         unless string?
           input_html_classes.unshift("string")
           input_html_options[:type] ||= input_type if html5?
